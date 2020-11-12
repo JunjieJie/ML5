@@ -1,14 +1,3 @@
-// Copyright (c) 2019 ml5
-//
-// This software is released under the MIT License.
-// https://opensource.org/licenses/MIT
-
-/* ===
-ml5 Example
-PoseNet using p5.js
-=== */
-/* eslint-disable */
-
 // Grab elements, create settings, etc.
 var video = document.getElementById("video");
 var canvas = document.getElementById("canvas");
@@ -64,8 +53,9 @@ function drawKeypoints() {
       // Only draw an ellipse is the pose probability is bigger than 0.2
       if (keypoint.score > 0.2) {
         ctx.beginPath();
-        ctx.arc(keypoint.position.x, keypoint.position.y, 10, 0, 2 * Math.PI);
+        ctx.arc(keypoint.position.x, keypoint.position.y, 5, 0, 2 * Math.PI);
         ctx.stroke();
+        ctx.strokeStyle = 'blue';
       }
     }
   }
