@@ -53,9 +53,11 @@ function drawKeypoints() {
       // Only draw an ellipse is the pose probability is bigger than 0.2
       if (keypoint.score > 0.2) {
         ctx.beginPath();
-        ctx.arc(keypoint.position.x, keypoint.position.y, 5, 0, 2 * Math.PI);
+        ctx.arc(keypoint.position.x, keypoint.position.y, 12.5, 0, 2 * Math.PI);
         ctx.stroke();
-        ctx.strokeStyle = 'blue';
+        ctx.strokeStyle = 'white';
+        ctx.fill();
+        ctx.fillStyle = 'red';
       }
     }
   }
